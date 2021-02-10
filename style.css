@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  scrollbar-width: thin;
+  scrollbar-color: #333 rgb(245, 225, 111);
+}
+
+/* scrollbar on Chrome, Edge, and Safari*/
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--yellow);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #333;
+  border-radius: 20px;
+}
+
+html {
+  --gray: #333;
+  --yellow: rgb(245, 225, 111);
+}
+
+body {
+  background-color: var(--gray);
+}
+
+.wrapper {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40vw;
+  max-width: 600px;
+  height: 85vh;
+  padding: 10px 20px;
+  background-color: var(--yellow);
+  border-radius: 3px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+ul {
+  padding: 15px 0;
+}
+
+.list {
+  overflow-y: scroll;
+  height: 75%;
+}
+
+li {
+  position: relative;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: left;
+}
+
+li i {
+  padding: 5px 10px;
+}
+
+li i.fa-trash-alt {
+  position: absolute;
+  right: 0;
+}
+
+li.crossed {
+  text-decoration: line-through;
+}
+
+h2 {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+button {
+  font-size: 14px;
+  font-weight: 600;
+  background-color: var(--gray);
+  color: var(--yellow);
+  border: 3px solid var(--gray);
+  border-radius: 5%;
+  cursor: pointer;
+}
+
+button.clear {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  width: 30%;
+}
+
+form {
+  position: relative;
+  width: 100%;
+  height: 30px;
+}
+
+form input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 70%;
+  height: 25px;
+}
+
+form button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 25%;
+  height: 25px;
+}
+
+form.search button {
+  background-color: var(--yellow);
+  color: var(--gray);
+  border: 3px solid var(--yellow);
+  cursor: auto;
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    width: 60vw;
+  }
+}
+
+@media (max-width: 540px) {
+  .wrapper {
+    width: 70vw;
+  }
+
+  h2 {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 414px) {
+  .wrapper {
+    width: 90vw;
+    height: 90%;
+    top: 5%;
+  }
+}
+
+@media (max-width: 320px) {
+  h2 {
+    font-size: 13px;
+  }
+}
